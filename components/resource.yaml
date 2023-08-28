@@ -11,8 +11,8 @@ spec:
     resourceRef:
       name: backend-app-chart
       version: latest
-  snapshotTemplate:
-    name: ocm-with-helm-snapshot-deployment      
+  # snapshotTemplate:
+  #   name: ocm-with-helm-snapshot-deployment      
 
 
 # apiVersion: delivery.ocm.software/v1alpha1
