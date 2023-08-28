@@ -4,16 +4,31 @@ metadata:
   name: ocm-with-helm
   namespace: ocm-system
 spec:
-  interval: 10m0s
+  interval: 1m0s
   component: github.com/ammar/backend-application-helm
   version:
-    semver: 1.0.0
+    semver: ">=v1.0.0"
   repository:
     url: ghcr.io/mohammad-ammar14
-    secretRef:
+    secretRef: 
       name: creds
-  # verify:
-  # - name: alice
-  #   publicKey:
-  #     secretRef:
-  #       name: alice-publickey    
+
+# apiVersion: delivery.ocm.software/v1alpha1
+# kind: ComponentVersion
+# metadata:
+#   name: ocm-with-helm
+#   namespace: ocm-system
+# spec:
+#   interval: 10m0s
+#   component: github.com/ammar/backend-application-helm
+#   version:
+#     semver: 1.0.0
+#   repository:
+#     url: ghcr.io/mohammad-ammar14
+#     secretRef:
+#       name: creds
+#   # verify:
+#   # - name: alice
+#   #   publicKey:
+#   #     secretRef:
+#   #       name: alice-publickey    
